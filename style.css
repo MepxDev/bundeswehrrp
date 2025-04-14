@@ -40,6 +40,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-links {
@@ -57,6 +58,19 @@ header {
 
 .nav-links a:hover {
   color: var(--gold);
+}
+
+.language-switcher {
+  margin-left: 20px;
+}
+
+.language-switcher select {
+  background-color: var(--white);
+  border: none;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Hero */
@@ -141,4 +155,3 @@ footer {
   padding: 20px 0;
   margin-top: 60px;
 }
-
