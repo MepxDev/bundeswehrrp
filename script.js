@@ -1,50 +1,58 @@
-const langData = {
-  de: {
-    home: "Startseite",
-    about: "Über Uns",
-    about_text: "Wir sind eine Roblox-Militär-Community mit Fokus auf Realismus, Ordnung und Teamarbeit.",
-    join: "Mitmachen",
-    join_text: "Möchtest du Soldat werden? Bewirb dich und beginne deine Karriere bei BundeswehrRP.",
-    rules: "Regeln",
-    rules_text: "Disziplin, Respekt und Engagement sind Pflicht – hier findest du unsere wichtigsten Vorschriften.",
-    contact: "Kontakt",
-    hero_title: "Willkommen bei BundeswehrRP",
-    hero_desc: "Realistisches Roblox Roleplay basierend auf der Bundeswehr",
-    join_now: "Tritt jetzt bei",
-    footer_note: "Nicht offiziell mit der Bundeswehr verbunden"
-  },
+// Language Switcher
+const languageSelect = document.getElementById('languageSelect');
+const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+
+const translations = {
   en: {
-    home: "Home",
-    about: "About Us",
-    about_text: "We are a Roblox military community focused on realism, discipline, and teamwork.",
-    join: "Join",
-    join_text: "Want to become a soldier? Apply now and start your BundeswehrRP career.",
-    rules: "Rules",
-    rules_text: "Discipline, respect, and dedication are mandatory – here are our main regulations.",
-    contact: "Contact",
-    hero_title: "Welcome to BundeswehrRP",
-    hero_desc: "Realistic Roblox roleplay based on the German Armed Forces",
-    join_now: "Join Now",
-    footer_note: "Not officially affiliated with the Bundeswehr"
-  }
+    home: 'Home',
+    about: 'About Us',
+    join: 'Join Now',
+    rules: 'Rules',
+    contact: 'Contact',
+    hero_title: 'Welcome to BundeswehrRP!',
+    hero_text: 'Join our unique Roblox roleplay server.',
+    join_button: 'Join Now',
+    about_title: 'About Us',
+    about_text: 'We offer you a unique roleplay experience in the world of the Bundeswehr.',
+    rules_title: 'Rules',
+    rules_text: 'Before you join, read our server rules and make sure you understand them.',
+    contact_title: 'Contact',
+    contact_text: 'Have questions? Contact us here.',
+    footer_note: 'Not officially affiliated with the Bundeswehr',
+  },
+  de: {
+    home: 'Startseite',
+    about: 'Über Uns',
+    join: 'Mitmachen',
+    rules: 'Regeln',
+    contact: 'Kontakt',
+    hero_title: 'Willkommen bei BundeswehrRP!',
+    hero_text: 'Tritt unserem einzigartigen Roblox Roleplay-Server bei.',
+    join_button: 'Jetzt Mitmachen',
+    about_title: 'Über Uns',
+    about_text: 'Wir bieten dir ein einzigartiges Roleplay-Erlebnis in der Welt der Bundeswehr.',
+    rules_title: 'Regeln',
+    rules_text: 'Bevor du beitrittst, lese unsere Server-Regeln und stelle sicher, dass du sie verstehst.',
+    contact_title: 'Kontakt',
+    contact_text: 'Hast du Fragen? Kontaktiere uns hier.',
+    footer_note: 'Nicht offiziell mit der Bundeswehr verbunden',
+  },
 };
 
-function applyLanguage(lang) {
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (langData[lang] && langData[lang][key]) {
-      el.innerText = langData[lang][key];
-    }
-  });
-  localStorage.setItem("lang", lang);
-}
-
-document.getElementById("languageSelect").addEventListener("change", function () {
-  applyLanguage(this.value);
+languageSelect.addEventListener('change', (event) => {
+  const selectedLanguage = event.target.value;
+  translatePage(selectedLanguage);
 });
 
-// Load preferred language from localStorage
-const savedLang = localStorage.getItem("lang") || "de";
-document.getElementById("languageSelect").value = savedLang;
-applyLanguage(savedLang);
+function translatePage(language) {
+  elementsToTranslate.forEach((element) => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+  });
+}
+
+// Default language set to German
+translatePage('de');
 
