@@ -61,4 +61,3 @@ form.addEventListener('submit', function (e) {
   alert(`Vielen Dank für deine Anmeldung, ${username}! Du wirst in Kürze kontaktiert.`);
   form.reset();
 });
-
