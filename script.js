@@ -48,4 +48,3 @@ const savedLang = localStorage.getItem("lang") || "de";
 document.getElementById("languageSelect").value = savedLang;
 applyLanguage(savedLang);
 
-
