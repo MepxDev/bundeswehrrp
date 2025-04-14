@@ -54,20 +54,6 @@ function reveal() {
     }
 }
 
-// Add to CSS for reveal animation:
-/*
-.about-content, .division-card, .step, .officer-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-}
-
-.about-content.active, .division-card.active, .step.active, .officer-card.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-*/
-
 // Form Submission Handling (if added later)
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
