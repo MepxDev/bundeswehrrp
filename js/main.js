@@ -68,7 +68,7 @@ function reveal() {
 }
 */
 
-// Form Submission Handling
+// Form Submission Handling (if added later)
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -86,29 +86,4 @@ if (contactForm) {
         alert('Thank you for your message! We will get back to you soon.');
         this.reset();
     });
-}
-
-// Countdown Timer (example for events)
-function updateCountdown() {
-    const eventDate = new Date('2023-12-31T00:00:00').getTime();
-    const now = new Date().getTime();
-    const distance = eventDate - now;
-    
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    document.getElementById('countdown').innerHTML = `
-        <div>${days}<span>Days</span></div>
-        <div>${hours}<span>Hours</span></div>
-        <div>${minutes}<span>Minutes</span></div>
-        <div>${seconds}<span>Seconds</span></div>
-    `;
-}
-
-// Initialize if countdown element exists
-if (document.getElementById('countdown')) {
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
 }
