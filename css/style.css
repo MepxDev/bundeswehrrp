@@ -308,9 +308,13 @@ nav {
 }
 
 .division-icon {
-    font-size: 2.5rem;
-    color: var(--gold-accent);
     margin-bottom: 1rem;
+}
+
+.division-symbol {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .division-card h3 {
@@ -572,12 +576,6 @@ nav {
     height: 20px;
     vertical-align: middle;
     margin-right: 5px;
-}
-
-.division-symbol {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
 }
 
 /* Responsive Design */
