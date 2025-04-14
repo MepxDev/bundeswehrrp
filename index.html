@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BundeswehrRP | Roblox</title>
+  <title>BundeswehrRP Roblox</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,11 +12,11 @@
       <h1 class="logo">BundeswehrRP</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="#" data-i18n="home">Startseite</a></li>
-          <li><a href="#" data-i18n="about">Über Uns</a></li>
-          <li><a href="#" data-i18n="join">Mitmachen</a></li>
-          <li><a href="#" data-i18n="rules">Regeln</a></li>
-          <li><a href="#" data-i18n="contact">Kontakt</a></li>
+          <li><a href="index.html" class="active" data-i18n="home">Startseite</a></li>
+          <li><a href="#about" data-i18n="about">Über Uns</a></li>
+          <li><a href="join.html" data-i18n="join">Mitmachen</a></li>
+          <li><a href="#rules" data-i18n="rules">Regeln</a></li>
+          <li><a href="#contact" data-i18n="contact">Kontakt</a></li>
         </ul>
       </nav>
       <div class="language-switcher">
@@ -29,27 +29,35 @@
   </header>
 
   <section class="hero">
-    <div class="overlay">
-      <div class="hero-content container">
-        <h2 data-i18n="hero_title">Willkommen bei BundeswehrRP</h2>
-        <p data-i18n="hero_desc">Realistisches Roblox Roleplay basierend auf der Bundeswehr</p>
-        <a href="#" class="btn" data-i18n="join_now">Tritt jetzt bei</a>
-      </div>
+    <div class="hero-content">
+      <h2 data-i18n="hero_title">Willkommen bei BundeswehrRP</h2>
+      <p data-i18n="hero_subtitle">Ein realistisches und spannendes Roblox Roleplay Erlebnis</p>
+      <a href="join.html" class="btn" data-i18n="join">Mitmachen</a>
     </div>
   </section>
 
-  <section class="info-panels container">
-    <div class="panel">
+  <section id="about" class="section">
+    <div class="container">
       <h3 data-i18n="about">Über Uns</h3>
-      <p data-i18n="about_text">Wir sind eine Roblox-Militär-Community mit Fokus auf Realismus, Ordnung und Teamarbeit.</p>
+      <p data-i18n="about_text">BundeswehrRP ist eine immersive Roblox Roleplay-Gruppe, die militärische Strukturen und Teamplay fördert.</p>
     </div>
-    <div class="panel">
+  </section>
+
+  <section id="rules" class="section dark">
+    <div class="container">
       <h3 data-i18n="rules">Regeln</h3>
-      <p data-i18n="rules_text">Disziplin, Respekt und Engagement sind Pflicht – hier findest du unsere wichtigsten Vorschriften.</p>
+      <ul>
+        <li data-i18n="rule1">Respektiere andere Spieler und Admins.</li>
+        <li data-i18n="rule2">Kein Teamkilling oder Trolling.</li>
+        <li data-i18n="rule3">Befolge alle Ingame-Befehle der Führung.</li>
+      </ul>
     </div>
-    <div class="panel">
-      <h3 data-i18n="join">Mitmachen</h3>
-      <p data-i18n="join_text">Möchtest du Soldat werden? Bewirb dich und beginne deine Karriere bei BundeswehrRP.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h3 data-i18n="contact">Kontakt</h3>
+      <p data-i18n="contact_text">Fragen? Kontaktiere uns auf Discord oder Roblox Gruppe.</p>
     </div>
   </section>
 
