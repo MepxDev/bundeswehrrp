@@ -1,3 +1,11 @@
+:root {
+  --blue: #002f5f;
+  --gold: #ffcc00;
+  --gray: #f4f4f4;
+  --white: #ffffff;
+  --dark: #1a1a1a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,56 +13,73 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--gray);
+  color: var(--dark);
 }
 
 .container {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-  overflow: hidden;
 }
 
+/* Header */
 header {
-  background: #003366;
-  color: #fff;
-  padding: 20px 0;
+  background-color: var(--blue);
+  padding: 15px 0;
+  color: var(--white);
 }
 
-header h1 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
+.logo {
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
-.hero {
-  background: url('https://www.bundeswehr.de/resource/blob/5616044/2d25d37664d11a7aa7f0fbe4010de80e/2020-06-30-header-hub-data.jpg') no-repeat center center/cover;
-  color: #fff;
-  height: 60vh;
+.navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-.hero .container {
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+/* Hero */
+.hero {
+  height: 75vh;
+  background: url('https://www.bundeswehr.de/resource/blob/5616044/2d25d37664d11a7aa7f0fbe4010de80e/2020-06-30-header-hub-data.jpg') center/cover no-repeat;
+  position: relative;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: left;
+  max-width: 600px;
 }
 
 .hero h2 {
@@ -68,34 +93,52 @@ nav a {
 }
 
 .btn {
-  background: #ffcc00;
-  color: #000;
-  padding: 10px 20px;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 12px 24px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-.about {
-  padding: 40px 0;
-  background: #fff;
+.btn:hover {
+  background: #e6b800;
 }
 
-.about h2 {
-  text-align: center;
-  margin-bottom: 20px;
+/* Info Panels */
+.info-panels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 50px auto;
+  gap: 20px;
 }
 
-.about p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
+.panel {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1 1 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
+.panel:hover {
+  transform: translateY(-5px);
+}
+
+.panel h3 {
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+/* Footer */
 footer {
-  background: #003366;
-  color: #fff;
+  background: var(--blue);
+  color: var(--white);
   text-align: center;
   padding: 20px 0;
+  margin-top: 60px;
 }
+
