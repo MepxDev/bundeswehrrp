@@ -1,99 +1,84 @@
 :root {
-  --blue: #002f5f;
-  --gold: #ffcc00;
-  --gray: #f4f4f4;
+  --primary: #003366;
+  --accent: #ffc600;
+  --background: #f4f4f4;
+  --text: #1a1a1a;
   --white: #ffffff;
-  --dark: #1a1a1a;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --dark: #0f0f0f;
+  --border: #ccc;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: var(--gray);
-  color: var(--dark);
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--text);
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Header */
 header {
-  background-color: var(--blue);
-  padding: 15px 0;
+  background: var(--primary);
   color: var(--white);
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+  padding: 15px 0;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 .nav-links a {
   color: var(--white);
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: var(--gold);
-}
-
-.language-switcher {
-  margin-left: 20px;
+.nav-links a.active {
+  border-bottom: 2px solid var(--accent);
 }
 
 .language-switcher select {
-  background-color: var(--white);
+  padding: 5px 10px;
+  border-radius: 4px;
   border: none;
-  padding: 6px 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-/* Hero */
-.hero {
-  height: 75vh;
-  background: url('https://www.bundeswehr.de/resource/blob/5616044/2d25d37664d11a7aa7f0fbe4010de80e/2020-06-30-header-hub-data.jpg') center/cover no-repeat;
-  position: relative;
+.hero.small {
+  height: 40vh;
+  background: url('https://www.bundeswehr.de/resource/image/264514/landscape_ratio2x1/1920/960/9c9150f5b35f2e879b42d6bdee00277d/36D5D8C67719E2E6A420A798C6D53D09/bundeswehr-de-presse.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
-  display: flex;
-  align-items: center;
+  text-align: center;
+  position: relative;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
+.hero.small::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.hero-content {
-  text-align: left;
-  max-width: 600px;
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h2 {
@@ -103,55 +88,68 @@ header {
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
 }
 
-.btn {
-  background: var(--gold);
-  color: var(--dark);
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: 0.3s;
+.form-section {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
 }
 
-.btn:hover {
-  background: #e6b800;
-}
-
-/* Info Panels */
-.info-panels {
+.join-form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 50px auto;
+  flex-direction: column;
   gap: 20px;
 }
 
-.panel {
-  background-color: var(--white);
-  padding: 30px;
-  border-radius: 10px;
-  flex: 1 1 30%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+.join-form label {
+  font-weight: 600;
 }
 
-.panel:hover {
-  transform: translateY(-5px);
+.join-form input,
+.join-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: #fff;
 }
 
-.panel h3 {
-  color: var(--blue);
-  margin-bottom: 15px;
+.join-form textarea {
+  resize: vertical;
 }
 
-/* Footer */
+.join-form button {
+  background-color: var(--accent);
+  color: var(--dark);
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.join-form button:hover {
+  background-color: #e6b800;
+}
+
 footer {
-  background: var(--blue);
+  background: var(--primary);
   color: var(--white);
   text-align: center;
-  padding: 20px 0;
+  padding: 15px;
+  font-size: 0.9rem;
   margin-top: 60px;
+}
+
+.form-message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
 }
