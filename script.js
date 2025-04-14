@@ -43,8 +43,9 @@ document.getElementById("languageSelect").addEventListener("change", function ()
   applyLanguage(this.value);
 });
 
-// Load preferred language
+// Load preferred language from localStorage
 const savedLang = localStorage.getItem("lang") || "de";
 document.getElementById("languageSelect").value = savedLang;
 applyLanguage(savedLang);
+
 
