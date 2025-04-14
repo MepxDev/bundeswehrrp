@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mitmachen | BundeswehrRP</title>
+  <link rel="stylesheet" href="stylejoin.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar container">
+      <h1 class="logo">BundeswehrRP</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="home">Startseite</a></li>
+          <li><a href="index.html#about" data-i18n="about">Über Uns</a></li>
+          <li><a href="join.html" class="active" data-i18n="join">Mitmachen</a></li>
+          <li><a href="index.html#rules" data-i18n="rules">Regeln</a></li>
+          <li><a href="index.html#contact" data-i18n="contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </div>
+  </header>
 
+  <section class="hero small">
+    <div class="hero-content">
+      <h2 data-i18n="join_title">Werde Teil von BundeswehrRP</h2>
+      <p data-i18n="join_desc">Fülle das Formular aus, um dich zu bewerben und ein Teil unseres Teams zu werden.</p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <form class="join-form">
+      <label for="name" data-i18n="name_label">Dein Name</label>
+      <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
+
+      <label for="roblox" data-i18n="roblox_label">Roblox Benutzername</label>
+      <input type="text" id="roblox" name="roblox" placeholder="Dein Roblox Name" required>
+
+      <label for="age" data-i18n="age_label">Alter</label>
+      <input type="number" id="age" name="age" min="10" required>
+
+      <label for="motivation" data-i18n="motivation_label">Warum möchtest du beitreten?</label>
+      <textarea id="motivation" name="motivation" rows="4" placeholder="Schreibe hier deine Motivation..." required></textarea>
+
+      <button type="submit" class="btn" data-i18n="submit_btn">Absenden</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BundeswehrRP Roblox | <span data-i18n="footer_note">Nicht offiziell mit der Bundeswehr verbunden</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
