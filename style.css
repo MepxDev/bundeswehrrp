@@ -1,3 +1,4 @@
+/* Global Styles */
 :root {
   --primary: #003366;
   --accent: #ffc600;
@@ -58,39 +59,21 @@ header {
 }
 
 .hero {
-  height: 80vh;
-  background: url('https://www.bundeswehr.de/resource/image/264514/landscape_ratio2x1/1920/960/9c9150f5b35f2e879b42d6bdee00277d/36D5D8C67719E2E6A420A798C6D53D09/bundeswehr-de-presse.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 60px 20px;
   text-align: center;
-  color: var(--white);
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
 }
 
 .hero h2 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-.btn {
+.hero .btn {
   background-color: var(--accent);
   color: var(--dark);
   font-weight: bold;
@@ -98,26 +81,12 @@ header {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem;
-  text-decoration: none;
+  font-size: 1.2rem;
 }
 
-.section {
-  padding: 60px 20px;
-}
-
-.section.dark {
-  background-color: var(--primary);
-  color: var(--white);
-}
-
-.section h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-ul {
-  padding-left: 20px;
+section {
+  padding: 40px 20px;
+  text-align: center;
 }
 
 footer {
