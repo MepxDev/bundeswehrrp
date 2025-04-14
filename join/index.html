@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mitmachen | BundeswehrRP</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar container">
+      <h1 class="logo">BundeswehrRP</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" data-i18n="home">Startseite</a></li>
+          <li><a href="#about" data-i18n="about">Über Uns</a></li>
+          <li><a href="." data-i18n="join">Mitmachen</a></li>
+          <li><a href="#rules" data-i18n="rules">Regeln</a></li>
+          <li><a href="#contact" data-i18n="contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="join">
+    <div class="container">
+      <h2 data-i18n="join_title">Willkommen bei BundeswehrRP</h2>
+      <p data-i18n="join_text">Schritt-für-Schritt Anleitung, um uns beizutreten.</p>
+
+      <div class="form-container">
+        <form id="joinForm">
+          <label for="username" data-i18n="join_username">Benutzername</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="email" data-i18n="join_email">E-Mail-Adresse</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="age" data-i18n="join_age">Alter</label>
+          <input type="number" id="age" name="age" required />
+
+          <button type="submit" class="btn" data-i18n="join_button">Beitreten</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BundeswehrRP Roblox | <span data-i18n="footer_note">Nicht offiziell mit der Bundeswehr verbunden</span></p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
