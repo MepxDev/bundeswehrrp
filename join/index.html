@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mitmachen | BundeswehrRP</title>
-  <link rel="stylesheet" href="../style.css" />
+  <title>BundeswehrRP | Mitmachen</title>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <header>
@@ -12,11 +12,8 @@
       <h1 class="logo">BundeswehrRP</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="/home" data-i18n="home">Startseite</a></li> <!-- Absolute path to home -->
-          <li><a href="#about" data-i18n="about">Über Uns</a></li>
-          <li><a href="/join" data-i18n="join">Mitmachen</a></li>
-          <li><a href="#rules" data-i18n="rules">Regeln</a></li>
-          <li><a href="#contact" data-i18n="contact">Kontakt</a></li>
+          <li><a href="/home/" data-i18n="home">Startseite</a></li>
+          <li><a href="/join/" data-i18n="join">Mitmachen</a></li>
         </ul>
       </nav>
       <div class="language-switcher">
@@ -28,25 +25,22 @@
     </div>
   </header>
 
-  <section class="join">
+  <section id="join">
     <div class="container">
-      <h2 data-i18n="join_title">Willkommen bei BundeswehrRP!</h2>
-      <p data-i18n="join_text">Schritt-für-Schritt Anleitung, um uns beizutreten.</p>
+      <h2 data-i18n="join_title">Mitmachen bei BundeswehrRP</h2>
+      <p data-i18n="join_description">Schritt-für-Schritt Anleitung, um uns beizutreten.</p>
+      <form class="join-form">
+        <label for="username" data-i18n="username_label">Benutzername</label>
+        <input type="text" id="username" name="username" required />
 
-      <div class="form-container">
-        <form id="joinForm">
-          <label for="username" data-i18n="join_username">Benutzername</label>
-          <input type="text" id="username" name="username" required />
+        <label for="email" data-i18n="email_label">E-Mail-Adresse</label>
+        <input type="email" id="email" name="email" required />
 
-          <label for="email" data-i18n="join_email">E-Mail-Adresse</label>
-          <input type="email" id="email" name="email" required />
+        <label for="age" data-i18n="age_label">Alter</label>
+        <input type="number" id="age" name="age" min="10" max="99" required />
 
-          <label for="age" data-i18n="join_age">Alter</label>
-          <input type="number" id="age" name="age" required />
-
-          <button type="submit" class="btn" data-i18n="join_button">Beitreten</button>
-        </form>
-      </div>
+        <button type="submit" data-i18n="submit_button">Beitreten</button>
+      </form>
     </div>
   </section>
 
@@ -56,6 +50,6 @@
     </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
