@@ -47,3 +47,4 @@ document.getElementById("languageSelect").addEventListener("change", function ()
 const savedLang = localStorage.getItem("lang") || "de";
 document.getElementById("languageSelect").value = savedLang;
 applyLanguage(savedLang);
+
