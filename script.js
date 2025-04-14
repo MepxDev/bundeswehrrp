@@ -1,63 +1,60 @@
-// Language Switcher
-const languageSelect = document.getElementById('languageSelect');
-const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-
 const translations = {
-  en: {
-    home: 'Home',
-    about: 'About Us',
-    join: 'Join Now',
-    rules: 'Rules',
-    contact: 'Contact',
-    join_title: 'Welcome to BundeswehrRP!',
-    join_text: 'Step-by-step guide to joining us.',
-    join_username: 'Username',
-    join_email: 'Email Address',
-    join_age: 'Age',
-    join_button: 'Join Now',
-    footer_note: 'Not officially affiliated with the Bundeswehr',
-  },
   de: {
-    home: 'Startseite',
-    about: 'Über Uns',
-    join: 'Mitmachen',
-    rules: 'Regeln',
-    contact: 'Kontakt',
-    join_title: 'Willkommen bei BundeswehrRP!',
-    join_text: 'Schritt-für-Schritt Anleitung, um uns beizutreten.',
-    join_username: 'Benutzername',
-    join_email: 'E-Mail-Adresse',
-    join_age: 'Alter',
-    join_button: 'Beitreten',
-    footer_note: 'Nicht offiziell mit der Bundeswehr verbunden',
+    home: "Startseite",
+    about: "Über Uns",
+    join: "Mitmachen",
+    rules: "Regeln",
+    contact: "Kontakt",
+    about_title: "Willkommen bei BundeswehrRP!",
+    about_text: "Erlebe die Bundeswehr auf Roblox und werde Teil unserer Community.",
+    footer_note: "Nicht offiziell mit der Bundeswehr verbunden",
+
+    // Join Page
+    join_title: "Mitmachen bei BundeswehrRP",
+    join_description: "Schritt-für-Schritt Anleitung, um uns beizutreten.",
+    username_label: "Benutzername",
+    email_label: "E-Mail-Adresse",
+    age_label: "Alter",
+    submit_button: "Beitreten"
   },
+  en: {
+    home: "Home",
+    about: "About Us",
+    join: "Join",
+    rules: "Rules",
+    contact: "Contact",
+    about_title: "Welcome to BundeswehrRP!",
+    about_text: "Experience the Bundeswehr on Roblox and join our community.",
+    footer_note: "Not officially affiliated with the Bundeswehr",
+
+    // Join Page
+    join_title: "Join BundeswehrRP",
+    join_description: "Step-by-step guide to join us.",
+    username_label: "Username",
+    email_label: "Email Address",
+    age_label: "Age",
+    submit_button: "Join Now"
+  }
 };
 
-languageSelect.addEventListener('change', (event) => {
-  const selectedLanguage = event.target.value;
-  translatePage(selectedLanguage);
-});
-
-function translatePage(language) {
-  elementsToTranslate.forEach((element) => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[language][key]) {
-      element.textContent = translations[language][key];
+function updateLanguage(language) {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[language] && translations[language][key]) {
+      el.textContent = translations[language][key];
     }
   });
+
+  localStorage.setItem("lang", language);
 }
 
-// Default language set to German
-translatePage('de');
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("languageSelect");
+  const savedLang = localStorage.getItem("lang") || "de";
+  select.value = savedLang;
+  updateLanguage(savedLang);
 
-// Handle form submission
-const form = document.getElementById('joinForm');
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const username = document.getElementById('username').value;
-  const email = document.getElementById('email').value;
-  const age = document.getElementById('age').value;
-
-  alert(`Vielen Dank für deine Anmeldung, ${username}! Du wirst in Kürze kontaktiert.`);
-  form.reset();
+  select.addEventListener("change", (e) => {
+    updateLanguage(e.target.value);
+  });
 });
