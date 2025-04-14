@@ -3,106 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Company Name</title>
+    <title>Bundeswehr RP | Roblox Military Roleplay</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <header class="military-header">
         <nav>
-            <div class="logo">YourLogo</div>
+            <div class="logo">
+                <img src="assets/images/bundeswehr-logo.png" alt="Bundeswehr RP Logo">
+                <span>BUNDESWEHR RP</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#divisions">Divisions</a></li>
+                <li><a href="#enlist">Enlist</a></li>
+                <li><a href="#command">Command</a></li>
             </ul>
+            <div class="cta-buttons">
+                <a href="https://www.roblox.com/communities/33508812/Bundeswehr-Rp#!/about" class="roblox-btn">
+                    <i class="fab fa-roblox"></i> Roblox Group
+                </a>
+                <a href="https://discord.gg/URSbNyjmmT" class="discord-btn">
+                    <i class="fab fa-discord"></i> Discord
+                </a>
+            </div>
             <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="video-background">
-            <!-- Replace with your own video -->
-            <video autoplay muted loop>
-                <source src="assets/hero-video.mp4" type="video/mp4">
-            </video>
-        </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Innovative Solutions for a Digital World</h1>
-            <p>Transforming businesses through cutting-edge technology</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Business Strategy</h3>
-                <p>Comprehensive planning for sustainable growth.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Technology Solutions</h3>
-                <p>Custom software and digital transformation.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-handshake"></i>
-                <h3>Partnership Development</h3>
-                <p>Building strategic alliances for mutual success.</p>
+            <h1>BUNDESWEHR ROLEPLAY</h1>
+            <p>Authentic German Military Roleplay on Roblox</p>
+            <div class="hero-buttons">
+                <a href="#enlist" class="enlist-btn">ENLIST NOW</a>
+                <a href="https://www.roblox.com/communities/33508812/Bundeswehr-Rp#!/about" class="roblox-btn">
+                    <i class="fab fa-roblox"></i> Join Group
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2>ABOUT OUR UNIT</h2>
+            <div class="divider"></div>
+        </div>
         <div class="about-content">
-            <h2>About Us</h2>
-            <p>We are a forward-thinking company dedicated to delivering exceptional results through innovative approaches and deep industry knowledge.</p>
-            <p>Our team combines decades of experience with fresh perspectives to tackle complex challenges.</p>
-        </div>
-        <div class="about-image">
-            <!-- Add your about image -->
-            <img src="assets/about-image.jpg" alt="About Us">
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> info@yourcompany.com</p>
-            <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
-            <p><i class="fas fa-map-marker-alt"></i> Your Company Address</p>
+            <div class="about-text">
+                <p>The Bundeswehr Roleplay group is a disciplined military simulation community on Roblox, dedicated to providing an authentic German armed forces experience.</p>
+                <p>Founded in 2023, we've grown to become one of the most respected military RP groups with regular trainings, operations, and events.</p>
+                <ul class="about-features">
+                    <li><i class="fas fa-check"></i> 100+ Active Members</li>
+                    <li><i class="fas fa-check"></i> Weekly Operations</li>
+                    <li><i class="fas fa-check"></i> Training Courses</li>
+                    <li><i class="fas fa-check"></i> Rank Progression</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/unit-photo.jpg" alt="Bundeswehr RP Unit Photo">
+            </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Divisions Section -->
+    <section id="divisions" class="divisions-section">
+        <div class="section-header">
+            <h2>OUR DIVISIONS</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="divisions-grid">
+            <div class="division-card">
+                <div class="division-icon">
+                    <i class="fas fa-helmet-battle"></i>
+                </div>
+                <h3>HEER</h3>
+                <p>German Army ground forces specializing in infantry combat and armored warfare.</p>
+            </div>
+            <div class="division-card">
+                <div class="division-icon">
+                    <i class="fas fa-fighter-jet"></i>
+                </div>
+                <h3>LUFTWAFFE</h3>
+                <p>Aerial combat division handling air superiority and close air support.</p>
+            </div>
+            <div class="division-card">
+                <div class="division-icon">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <h3>MARINE</h3>
+                <p>Naval forces responsible for maritime operations and coastal defense.</p>
+            </div>
+            <div class="division-card">
+                <div class="division-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3>SPECIAL FORCES</h3>
+                <p>Elite operators handling high-risk missions and special operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlistment Section -->
+    <section id="enlist" class="enlist-section">
+        <div class="section-header">
+            <h2>HOW TO ENLIST</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="enlist-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Join Our Discord</h3>
+                <p>Join our Discord community to begin the application process and meet the team.</p>
+                <a href="https://discord.gg/URSbNyjmmT" class="step-btn">
+                    <i class="fab fa-discord"></i> Discord Invite
+                </a>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Roblox Group</h3>
+                <p>Join our official Roblox group to participate in events and trainings.</p>
+                <a href="https://www.roblox.com/communities/33508812/Bundeswehr-Rp#!/about" class="step-btn">
+                    <i class="fab fa-roblox"></i> Roblox Group
+                </a>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Complete Basic Training</h3>
+                <p>Attend our basic training to learn unit procedures and military fundamentals.</p>
+                <a href="#command" class="step-btn">Training Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Command Staff Section -->
+    <section id="command" class="command-section">
+        <div class="section-header">
+            <h2>COMMAND STAFF</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="command-grid">
+            <div class="officer-card">
+                <img src="assets/images/co.jpg" alt="Commanding Officer">
+                <h3>Oberst</h3>
+                <p>Commanding Officer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-roblox"></i></a>
+                </div>
+            </div>
+            <div class="officer-card">
+                <img src="assets/images/xo.jpg" alt="Executive Officer">
+                <h3>Major</h3>
+                <p>Executive Officer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-roblox"></i></a>
+                </div>
+            </div>
+            <div class="officer-card">
+                <img src="assets/images/csm.jpg" alt="Sergeant Major">
+                <h3>Hauptfeldwebel</h3>
+                <p>Sergeant Major</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-roblox"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="military-footer">
         <div class="footer-content">
-            <div class="footer-logo">YourLogo</div>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Careers</a>
+            <div class="footer-logo">
+                <img src="assets/images/bundeswehr-logo.png" alt="Bundeswehr RP Logo">
+                <span>BUNDESWEHR RP</span>
             </div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#divisions">Divisions</a></li>
+                    <li><a href="#enlist">Enlist</a></li>
+                    <li><a href="#command">Command</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.roblox.com/communities/33508812/Bundeswehr-Rp#!/about" class="roblox-icon">
+                        <i class="fab fa-roblox"></i>
+                    </a>
+                    <a href="https://discord.gg/URSbNyjmmT" class="discord-icon">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="youtube-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Bundeswehr Roleplay. All rights reserved.</p>
+            <p>This is not an official Bundeswehr organization. This is a Roblox roleplay group.</p>
         </div>
     </footer>
 
