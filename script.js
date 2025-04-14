@@ -9,15 +9,12 @@ const translations = {
     join: 'Join Now',
     rules: 'Rules',
     contact: 'Contact',
-    hero_title: 'Welcome to BundeswehrRP!',
-    hero_text: 'Join our unique Roblox roleplay server.',
+    join_title: 'Welcome to BundeswehrRP!',
+    join_text: 'Step-by-step guide to joining us.',
+    join_username: 'Username',
+    join_email: 'Email Address',
+    join_age: 'Age',
     join_button: 'Join Now',
-    about_title: 'About Us',
-    about_text: 'We offer you a unique roleplay experience in the world of the Bundeswehr.',
-    rules_title: 'Rules',
-    rules_text: 'Before you join, read our server rules and make sure you understand them.',
-    contact_title: 'Contact',
-    contact_text: 'Have questions? Contact us here.',
     footer_note: 'Not officially affiliated with the Bundeswehr',
   },
   de: {
@@ -26,15 +23,12 @@ const translations = {
     join: 'Mitmachen',
     rules: 'Regeln',
     contact: 'Kontakt',
-    hero_title: 'Willkommen bei BundeswehrRP!',
-    hero_text: 'Tritt unserem einzigartigen Roblox Roleplay-Server bei.',
-    join_button: 'Jetzt Mitmachen',
-    about_title: 'Über Uns',
-    about_text: 'Wir bieten dir ein einzigartiges Roleplay-Erlebnis in der Welt der Bundeswehr.',
-    rules_title: 'Regeln',
-    rules_text: 'Bevor du beitrittst, lese unsere Server-Regeln und stelle sicher, dass du sie verstehst.',
-    contact_title: 'Kontakt',
-    contact_text: 'Hast du Fragen? Kontaktiere uns hier.',
+    join_title: 'Willkommen bei BundeswehrRP!',
+    join_text: 'Schritt-für-Schritt Anleitung, um uns beizutreten.',
+    join_username: 'Benutzername',
+    join_email: 'E-Mail-Adresse',
+    join_age: 'Alter',
+    join_button: 'Beitreten',
     footer_note: 'Nicht offiziell mit der Bundeswehr verbunden',
   },
 };
@@ -56,3 +50,14 @@ function translatePage(language) {
 // Default language set to German
 translatePage('de');
 
+// Handle form submission
+const form = document.getElementById('joinForm');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const age = document.getElementById('age').value;
+
+  alert(`Vielen Dank für deine Anmeldung, ${username}! Du wirst in Kürze kontaktiert.`);
+  form.reset();
+});
