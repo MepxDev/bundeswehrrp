@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discord Style Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#2c2f33] text-white font-sans min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-md p-6 bg-[#23272a] rounded-2xl shadow-lg text-center">
+    
+    <!-- Top Button Link -->
+    <div class="flex justify-between items-center mb-6">
+      <button onclick="goToLink()" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-2 px-4 rounded inline-flex items-center">
+        <span>&larr; Back</span>
+      </button>
+      <span class="text-lg">Button Link</span>
+    </div>
+
+    <!-- Profile Picture -->
+    <div class="mb-4">
+      <img src="pfp1.png" alt="Profile Picture" class="w-24 h-24 rounded-full mx-auto border-4 border-[#7289da]" />
+    </div>
+
+    <!-- Discord Logo and Name -->
+    <div class="flex items-center justify-center space-x-2 mb-6">
+      <img src="discord-logo.png" alt="Discord Logo" class="w-6 h-6" />
+      <a href="#" class="underline text-[#7289da] font-medium text-lg">Mepedev</a>
+    </div>
+
+    <!-- Bottom Button Link -->
+    <div class="flex justify-center">
+      <button onclick="goToLink()" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-2 px-4 rounded inline-flex items-center">
+        <span>Link</span>
+      </button>
+      <span class="ml-4 text-lg">Button Link</span>
+    </div>
+
+  </div>
+
+  <script>
+    function goToLink() {
+      const url = prompt("Enter a link to visit:");
+      if (url) {
+        // Add http if it's missing
+        const finalUrl = url.startsWith('http') ? url : 'https://' + url;
+        window.open(finalUrl, '_blank');
+      }
+    }
+  </script>
+</body>
+</html>
