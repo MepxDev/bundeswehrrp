@@ -119,8 +119,8 @@ nav {
 }
 
 .roblox-btn {
+    background-color: #e12c2c;
     color: white;
-    background: none;
 }
 
 .discord-btn {
@@ -455,7 +455,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none;
+    background-color: var(--primary-color);
     transition: all 0.3s;
 }
 
@@ -468,12 +468,16 @@ nav {
     filter: brightness(0) invert(1);
 }
 
+.social-links a i {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
 .social-logo {
     width: 24px;
     height: 24px;
     object-fit: contain;
     transition: transform 0.3s;
-    display: block;
 }
 
 .social-logo:hover {
@@ -554,13 +558,24 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none;
+    background-color: var(--primary-color);
     transition: all 0.3s;
 }
 
 .social-icons a:hover {
     transform: translateY(-3px);
-    background-color: rgba(255,255,255,0.1);
+}
+
+.social-icons a.discord-icon:hover {
+    background-color: #5865F2;
+}
+
+.social-icons a.roblox-icon:hover {
+    background-color: #e12c2c;
+}
+
+.social-icons a:hover .social-logo {
+    filter: brightness(0) invert(1);
 }
 
 .footer-bottom {
