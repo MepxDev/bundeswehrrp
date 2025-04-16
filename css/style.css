@@ -445,6 +445,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .social-links a {
@@ -454,15 +455,40 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--primary-color);
     transition: all 0.3s;
 }
 
 .social-links a:hover {
     transform: translateY(-3px);
+    background-color: var(--gold-accent);
+}
+
+.social-links a:hover .social-logo {
+    filter: brightness(0) invert(1);
 }
 
 .social-links a i {
+    color: var(--text-color);
     font-size: 1.2rem;
+}
+
+.social-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.social-logo:hover {
+    transform: scale(1.1);
+}
+
+.step-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 /* Footer */
@@ -529,10 +555,10 @@ nav {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--primary-color);
     transition: all 0.3s;
 }
 
@@ -540,16 +566,16 @@ nav {
     transform: translateY(-3px);
 }
 
-.roblox-icon {
-    color: #e12c2c;
+.social-icons a.discord-icon:hover {
+    background-color: #5865F2;
 }
 
-.discord-icon {
-    color: #5865F2;
+.social-icons a.roblox-icon:hover {
+    background-color: #e12c2c;
 }
 
-.youtube-icon {
-    color: #FF0000;
+.social-icons a:hover .social-logo {
+    filter: brightness(0) invert(1);
 }
 
 .footer-bottom {
@@ -562,20 +588,6 @@ nav {
 
 .footer-bottom p:first-child {
     margin-bottom: 0.5rem;
-}
-
-/* Social Logo Styling */
-.social-logo {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-.step-icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 5px;
 }
 
 /* Responsive Design */
@@ -658,75 +670,4 @@ nav {
     .footer-content {
         grid-template-columns: 1fr;
     }
-}
-.social-logo {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    transition: transform 0.3s;
-}
-
-.social-logo:hover {
-    transform: scale(1.1);
-}
-
-/* Command Staff Social Links */
-.officer-card .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.officer-card .social-links a {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
-    transition: all 0.3s;
-}
-
-.officer-card .social-links a:hover {
-    transform: translateY(-3px);
-    background-color: var(--gold-accent);
-}
-
-.officer-card .social-links a:hover .social-logo {
-    filter: brightness(0) invert(1);
-}
-
-.officer-card .social-links a i {
-    color: var(--text-color);
-    font-size: 1.2rem;
-}
-
-/* Footer Social Icons */
-.footer-social .social-icons a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
-    transition: all 0.3s;
-}
-
-.footer-social .social-icons a:hover {
-    transform: translateY(-3px);
-}
-
-.footer-social .social-icons a.discord-icon:hover {
-    background-color: #5865F2;
-}
-
-.footer-social .social-icons a.roblox-icon:hover {
-    background-color: #e12c2c;
-}
-
-.footer-social .social-icons a:hover .social-logo {
-    filter: brightness(0) invert(1);
 }
