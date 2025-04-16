@@ -2,59 +2,239 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Moderation Team</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #111;
+      color: #fff;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      pointer-events: none;
+    }
+
+    .tooltip:hover::after {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body class="bg-[#2c2f33] text-white font-sans min-h-screen p-6">
+  
   <!-- Back Button -->
-  <div class="mb-4">
+  <div class="mb-6">
     <a href="https://bundeswehrrp.com" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-2 px-4 rounded inline-flex items-center">
       &larr; Back
     </a>
   </div>
 
   <!-- Header -->
-  <div class="text-center mb-10">
-    <img src="csm.png" alt="Main Profile" class="w-24 h-24 mx-auto rounded-full border-4 border-[#7289da]" />
-    <h1 class="text-2xl font-bold mt-4">Moderation Team</h1>
+  <div class="text-center mb-12">
+    <img src="csm.png" alt="Main Profile" class="w-40 h-40 mx-auto rounded-full border-4 border-[#7289da]" />
+    <h1 class="text-5xl font-bold mt-4 text-[#7289da]">Moderation Team</h1>
   </div>
 
   <!-- Grid of Mods -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-    <!-- One mod card -->
-    <div class="bg-[#23272a] rounded-xl p-4 flex flex-col items-center shadow hover:shadow-lg transition">
-      <img src="pfp1.png" alt="Mod" class="w-20 h-20 rounded-full border-2 border-[#7289da] mb-2" />
-      <span class="text-[#7289da] font-medium">Same</span>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- 15 Moderator Cards -->
+    <!-- Each card repeats below -->
+    <!-- START CARD -->
+    <!-- You can change pfpX.png as needed for real images -->
+
+    <!-- CARD 1 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp1.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">iamcool76</span>
+        <button onclick="copyUsername('iamcool76')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
     </div>
 
-    <!-- Copy this block for more mods -->
-    <div class="bg-[#23272a] rounded-xl p-4 flex flex-col items-center shadow hover:shadow-lg transition">
-      <img src="pfp1.png" alt="Mod" class="w-20 h-20 rounded-full border-2 border-[#7289da] mb-2" />
-      <span class="text-[#7289da] font-medium">Same</span>
+    <!-- Copy the card 14 more times for 15 total -->
+    <!-- CARD 2 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp2.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
     </div>
 
-    <div class="bg-[#23272a] rounded-xl p-4 flex flex-col items-center shadow hover:shadow-lg transition">
-      <img src="pfp1.png" alt="Mod" class="w-20 h-20 rounded-full border-2 border-[#7289da] mb-2" />
-      <span class="text-[#7289da] font-medium">Same</span>
+    <!-- CARD 3 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp3.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
     </div>
 
-    <div class="bg-[#23272a] rounded-xl p-4 flex flex-col items-center shadow hover:shadow-lg transition">
-      <img src="pfp1.png" alt="Mod" class="w-20 h-20 rounded-full border-2 border-[#7289da] mb-2" />
-      <span class="text-[#7289da] font-medium">Same</span>
+    <!-- CARD 4 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp4.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
     </div>
 
-    <div class="bg-[#23272a] rounded-xl p-4 flex flex-col items-center shadow hover:shadow-lg transition">
-      <img src="pfp1.png" alt="Mod" class="w-20 h-20 rounded-full border-2 border-[#7289da] mb-2" />
-      <span class="text-[#7289da] font-medium">Same</span>
+    <!-- CARD 5 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp5.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
     </div>
 
-    <div class="bg-[#23272a] rounded-xl p-4 flex flex-col items-center shadow hover:shadow-lg transition">
-      <img src="pfp1.png" alt="Mod" class="w-20 h-20 rounded-full border-2 border-[#7289da] mb-2" />
-      <span class="text-[#7289da] font-medium">Same</span>
+    <!-- CARD 6 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp6.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
     </div>
 
-    <!-- Repeat as many as you need -->
+    <!-- CARD 7 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp7.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp8.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- CARD 9 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp9.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- CARD 10 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp10.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- CARD 11 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp11.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- CARD 12 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp12.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- CARD 13 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp13.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- CARD 14 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp14.png" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- CARD 15 -->
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp15.png" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+
+    <!-- Repeat for CARD 5 to 15 -->
+    <!-- For brevity, below are all using pfp1.png, but you can change images -->
+    ${[...Array(11)].map((_, i) => `
+    <div class="bg-[#23272a] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
+      <img src="pfp${i + 5}.png" alt="Mod" class="w-28 h-28 rounded-full border-2 border-[#7289da] mb-4" />
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-[#7289da] font-medium text-lg">???</span>
+        <button onclick="copyUsername('???')" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] px-2 py-1 rounded" data-tooltip="Copy Username">📋</button>
+      </div>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-1.5 px-4 rounded text-sm">Add him as friend</a>
+    </div>
+    `).join('')}
+
   </div>
+
+  <!-- JS for copy function -->
+  <script>
+    function copyUsername(name) {
+      navigator.clipboard.writeText(name).then(() => {
+        const button = event.currentTarget;
+        const originalTooltip = button.getAttribute('data-tooltip');
+        button.setAttribute('data-tooltip', 'Copied!');
+        setTimeout(() => {
+          button.setAttribute('data-tooltip', originalTooltip);
+        }, 1500);
+      });
+    }
+  </script>
+
 </body>
 </html>
