@@ -5,13 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Discord Style Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Tooltip styling */
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #111;
+      color: #fff;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      pointer-events: none;
+    }
+
+    .tooltip:hover::after {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body class="bg-[#2c2f33] text-white font-sans min-h-screen flex items-center justify-center">
   <div class="w-full max-w-md p-6 bg-[#23272a] rounded-2xl shadow-lg text-center">
     
     <!-- Top Button -->
     <div class="flex justify-start mb-6">
-      <a href="https://bundeswehrrp.com" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-2 px-4 rounded inline-flex items-center">
+      <a href="https://bundeswehrrp.com" class="bg-[#7289da] hover:bg-[#5b6eae] transition duration-200 text-white font-bold py-2 px-4 rounded inline-flex items-center">
         <span>&larr; Back</span>
       </a>
     </div>
@@ -21,19 +49,35 @@
       <img src="pfp1.png" alt="Profile Picture" class="w-24 h-24 rounded-full mx-auto border-4 border-[#7289da]" />
     </div>
 
-    <!-- Discord Logo and Name -->
-    <div class="flex items-center justify-center space-x-2 mb-6">
+    <!-- Discord Name with Copy -->
+    <div class="flex items-center justify-center space-x-3 mb-6">
       <img src="discord-logo.png" alt="Discord Logo" class="w-6 h-6" />
-      <a href="#" class="underline text-[#7289da] font-medium text-lg">Mepedev</a>
+      <span class="text-[#7289da] font-medium text-lg">MepxDev</span>
+      <button onclick="copyUsername()" class="tooltip text-sm bg-[#7289da] hover:bg-[#5b6eae] transition duration-200 px-2 py-1 rounded" data-tooltip="Copy Username">
+        📋
+      </button>
     </div>
 
     <!-- Bottom Button -->
     <div class="flex justify-center">
-      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] text-white font-bold py-2 px-4 rounded inline-flex items-center">
-        <span>Link</span>
+      <a href="https://discord.com/channels/@me/" target="_blank" class="bg-[#7289da] hover:bg-[#5b6eae] transition duration-200 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+        <span>Add him as friend</span>
       </a>
     </div>
-
   </div>
+
+  <script>
+    function copyUsername() {
+      navigator.clipboard.writeText("MepxDev").then(() => {
+        const button = event.currentTarget;
+        const originalTooltip = button.getAttribute('data-tooltip');
+        button.setAttribute('data-tooltip', 'Copied!');
+        setTimeout(() => {
+          button.setAttribute('data-tooltip', originalTooltip);
+        }, 1500);
+      });
+    }
+  </script>
 </body>
 </html>
+
